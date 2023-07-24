@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tyOG0K98QMhR5V7VXiOFeo431kBbrbo3N557ZRao14JsFaufDur7YwI3qefX9uiSqLrhCwccpPBRXWjABoEpMQ==",
+  "dgSpecHash": "2pY6/1kMKbk+Dxuv1NwR0/G3whACmSu70HiEY4ZfUEK8EPEkhy6dBd34f8HRCKUQXfmCyKfT1GUFvVUeZaEwCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\hatic\\source\\repos\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hatic\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\hatic\\.nuget\\packages\\fluentvalidation\\11.6.0\\fluentvalidation.11.6.0.nupkg.sha512",
+    "C:\\Users\\hatic\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\hatic\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\hatic\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hatic\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\hatic\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
