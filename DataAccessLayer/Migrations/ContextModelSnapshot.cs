@@ -89,6 +89,30 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Blogs");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.BlogRating", b =>
+                {
+                    b.Property<int>("BlogRatingID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BlogID")
+                        .HasColumnType("int");
+
+                    b.Property<float>("BlogRatingAverage")
+                        .HasColumnType("real");
+
+                    b.Property<int>("BlogRatingCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogTotalScore")
+                        .HasColumnType("int");
+
+                    b.HasKey("BlogRatingID");
+
+                    b.ToTable("BlogRatings");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
                 {
                     b.Property<int>("CategoryID")
@@ -118,6 +142,9 @@ namespace DataAccessLayer.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("BlogID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BlogScore")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")
@@ -200,9 +227,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("WriterAbout")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("WriterID1")
-                        .HasColumnType("int");
-
                     b.Property<string>("WriterImage")
                         .HasColumnType("nvarchar(max)");
 
@@ -219,8 +243,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("WriterID");
-
-                    b.HasIndex("WriterID1");
 
                     b.ToTable("Writers");
                 });
@@ -255,13 +277,6 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Blog");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Writer", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Writer", null)
-                        .WithMany("Writers")
-                        .HasForeignKey("WriterID1");
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
                 {
                     b.Navigation("Comments");
@@ -270,11 +285,6 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concrete.Category", b =>
                 {
                     b.Navigation("Blogs");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Writer", b =>
-                {
-                    b.Navigation("Writers");
                 });
 #pragma warning restore 612, 618
         }

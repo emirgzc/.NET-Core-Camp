@@ -4,6 +4,7 @@ using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDemo.Controllers
@@ -11,11 +12,13 @@ namespace CoreDemo.Controllers
     public class RegisterController : Controller
     {
         WriterManager wm = new WriterManager(new EfWriterRepository());
-        [HttpGet]
+        [AllowAnonymous]
+        [HttpGet]        
         public IActionResult Index()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Index(Writer p, string passwordAgain)
         {
@@ -27,7 +30,7 @@ namespace CoreDemo.Controllers
                 {
 					p.WriterStatus = true;
 					p.WriterAbout = "yazar about kısmı";
-					p.WriterPassword = BCrypt.Net.BCrypt.HashPassword(p.WriterPassword);
+					//p.WriterPassword = BCrypt.Net.BCrypt.HashPassword(p.WriterPassword);
 					wm.WriterAdd(p);
 					return RedirectToAction("Index", "Blog");
                 }

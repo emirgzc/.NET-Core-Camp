@@ -23,7 +23,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <link href="~/blog/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="~/blog/css/single.css">
-    <link href="~/blog/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="~/blog/css/style.css" rel='stylesheet' type='text/css' />   
     <link href="~/blog/css/fontawesome-all.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
           rel="stylesheet">
@@ -36,23 +36,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="top-bar_sub_w3layouts container-fluid">
             <div class="row">
                 <div class="col-md-4 logo text-left">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="fab fa-linode"></i> Weblog
+                    <a class="navbar-brand" href="/Writer/Index/">
+                        <i class="fab fa-linode"></i> CoreCamp
                     </a>
                 </div>
-                @await Html.PartialAsync("WelcomePartial")
-                @await Html.PartialAsync("TopSocialPartial")                
-                
+                @await Html.PartialAsync("~/Views/Shared/Partial/WelcomePartial.cshtml")
+                @await Html.PartialAsync("~/Views/Shared/Partial/TopSocialPartial.cshtml")
+
             </div>
         </div>
         
-        @await Html.PartialAsync("BarButtonPartial")
+        @await Html.PartialAsync("~/Views/Shared/Partial/BarButtonPartial.cshtml")
     </header>
 
     <!--//header-->
     @RenderBody()
     <!--footer-->
-    @await Html.PartialAsync("FooterPartial")
+    @await Html.PartialAsync("~/Views/Shared/Partial/FooterPartial.cshtml")
     <!---->
     <!-- js -->
     <script src="~/blog/js/jquery-2.2.3.min.js"></script>

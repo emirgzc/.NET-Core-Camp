@@ -742,9 +742,10 @@ ul.blog-icons i {
     color: #333333;
     font-weight: 700;
     margin-bottom: 1em;
+    margin-top: 2em;
 }
 .tech-btm {
-    margin-bottom: 2em;
+    /*margin-bottom: 1em;*/
 }
 .tech-btm input[type="email"] {
     width: 100%;
@@ -769,6 +770,7 @@ ul.blog-icons i {
 	width: 100%;
 	cursor: pointer;
 	text-transform:uppercase;
+	margin-bottom:2em;
 }
 .tech-btm input[type="submit"]:hover {
 	background: #05b166;
